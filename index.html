@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Personas - Workshop Activity</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .header-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .persona-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+        
+        .persona-header {
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .persona-header.fitness {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .persona-header.podcast {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .persona-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .persona-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .persona-age {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .persona-quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        .persona-body {
+            padding: 2rem;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .demographics-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .demo-item {
+            margin-bottom: 1rem;
+        }
+        
+        .demo-label {
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .demo-value {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .section-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .section-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .section-list.fitness li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #f5576c;
+            font-weight: bold;
+        }
+        
+        .section-list.podcast li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .task-section {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .task-section h2 {
+            color: #856404;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .task-section p {
+            color: #856404;
+        }
+        
+        .task-questions {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+        
+        .task-questions li {
+            margin-bottom: 1rem;
+        }
+        
+        .reminder-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 6px;
+            font-style: italic;
+            color: #0d47a1;
+        }
+        
+        .section-content {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <!-- Header -->
+        <div class="header-section">
+            <h1 class="mb-3">Marketing Personas - Workshop Activity</h1>
+            <p class="lead"><strong>Instructions for Students:</strong> Your Marketing Coordinator has created these personas based on audience research. As Product Coordinator, your job is to identify what's <strong>missing</strong> for product development. What do you need to know to make design decisions?</p>
+        </div>
+        
+        <!-- Personas -->
+        <div class="row">
+            <!-- Lisa Chen - Fitness Persona -->
+            <div class="col-lg-6">
+                <div class="persona-card">
+                    <div class="persona-header fitness">
+                        <div class="persona-photo">🏃‍♀️</div>
+                        <div class="persona-name">Lisa Chen</div>
+						<div class="persona-age"><h4>Her used product: Fitness App</h4></div>
+                        <div class="persona-age">31 years old</div>
+                        <div class="persona-quote">"I want to stay active but need flexibility around my schedule"</div>
+                    </div>
+                    
+                    <div class="persona-body">
+                        <!-- Demographics -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>👤</span> Demographics
+                            </div>
+                            <div class="demographics-box">
+                                <div class="row">
+                                    <div class="col-6 demo-item">
+                                        <div class="demo-label">Location</div>
+                                        <div class="demo-value">Amsterdam</div>
+                                    </div>
+                                    <div class="col-6 demo-item">
+                                        <div class="demo-label">Occupation</div>
+                                        <div class="demo-value">Marketing Manager</div>
+                                    </div>
+                                    <div class="col-6 demo-item">
+                                        <div class="demo-label">Income</div>
+                                        <div class="demo-value">€45,000/year</div>
+                                    </div>
+                                    <div class="col-6 demo-item">
+                                        <div class="demo-label">Education</div>
+                                        <div class="demo-value">Bachelor's degree</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Lifestyle & Values -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>✨</span> Lifestyle & Values
+                            </div>
+                            <ul class="section-list fitness">
+                                <li>Health-conscious, follows wellness influencers on Instagram</li>
+                                <li>Values work-life balance but has demanding job</li>
+                                <li>Enjoys boutique fitness classes when time permits</li>
+                                <li>Willing to invest in quality wellness products</li>
+                                <li>Environmentally conscious consumer</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Media Habits -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>📱</span> Media Habits
+                            </div>
+                            <ul class="section-list fitness">
+                                <li>Active on Instagram (daily) and Pinterest (weekly)</li>
+                                <li>Listens to wellness podcasts during commute</li>
+                                <li>Reads health & lifestyle blogs</li>
+                                <li>Responds well to aspirational visual content</li>
+                                <li>Engages with brands that share sustainability values</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Purchasing Behavior -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>💳</span> Purchasing Behavior
+                            </div>
+                            <ul class="section-list fitness">
+                                <li>Researches products thoroughly before buying</li>
+                                <li>Influenced by peer recommendations and reviews</li>
+                                <li>Willing to pay premium for quality and convenience</li>
+                                <li>Prefers subscription models over one-time purchases</li>
+                                <li>Downloads apps featured in "Best of" lists</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Motivations -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>🎯</span> Motivations
+                            </div>
+                            <ul class="section-list fitness">
+                                <li>Wants to maintain fitness despite busy schedule</li>
+                                <li>Seeks community and accountability</li>
+                                <li>Aspires to balanced, healthy lifestyle</li>
+                                <li>Values progress tracking and visible results</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Marcus Williams - Podcast Persona -->
+            <div class="col-lg-6">
+                <div class="persona-card">
+                    <div class="persona-header podcast">
+                        <div class="persona-photo">🎧</div>
+                        <div class="persona-name">Marcus Williams</div>
+						<div class="persona-age"><h4>His used product: Podcast App</h4></div>
+                        <div class="persona-age">24 years old</div>
+                        <div class="persona-quote">"I'm always learning something new on my commute"</div>
+                    </div>
+                    
+                    <div class="persona-body">
+                        <!-- Demographics -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>👤</span> Demographics
+                            </div>
+                            <div class="demographics-box">
+                                <div class="row">
+                                    <div class="col-6 demo-item">
+                                        <div class="demo-label">Location</div>
+                                        <div class="demo-value">Rotterdam</div>
+                                    </div>
+                                    <div class="col-6 demo-item">
+                                        <div class="demo-label">Occupation</div>
+                                        <div class="demo-value">Junior Graphic Designer</div>
+                                    </div>
+                                    <div class="col-6 demo-item">
+                                        <div class="demo-label">Income</div>
+                                        <div class="demo-value">€32,000/year</div>
+                                    </div>
+                                    <div class="col-6 demo-item">
+                                        <div class="demo-label">Education</div>
+                                        <div class="demo-value">HBO Creative degree</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Lifestyle & Values -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>✨</span> Lifestyle & Values
+                            </div>
+                            <ul class="section-list podcast">
+                                <li>Curious and intellectually engaged</li>
+                                <li>Values authentic, unpolished content over overproduced media</li>
+                                <li>Part of creative community, attends design meetups</li>
+                                <li>Early adopter of new platforms and technologies</li>
+                                <li>Believes in continuous learning and self-improvement</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Media Habits -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>📱</span> Media Habits
+                            </div>
+                            <ul class="section-list podcast">
+                                <li>Heavy podcast consumer (8-10 hours/week)</li>
+                                <li>Discovers content through Reddit, Twitter, and YouTube</li>
+                                <li>Follows niche creators and independent producers</li>
+                                <li>Shares interesting episodes with friends via WhatsApp</li>
+                                <li>Subscribes to 3-4 Patreon creators</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Purchasing Behavior -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>💳</span> Purchasing Behavior
+                            </div>
+                            <ul class="section-list podcast">
+                                <li>Price-sensitive but supports creators he values</li>
+                                <li>Influenced by host recommendations and authentic sponsorships</li>
+                                <li>Prefers free ad-supported over paid subscriptions</li>
+                                <li>Makes impulse decisions on low-cost digital products</li>
+                                <li>Loyal to brands that "get" his community</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Motivations -->
+                        <div class="section-content">
+                            <div class="section-title">
+                                <span>🎯</span> Motivations
+                            </div>
+                            <ul class="section-list podcast">
+                                <li>Wants to make productive use of commute time</li>
+                                <li>Seeks deep-dive content on niche topics</li>
+                                <li>Values belonging to communities of like-minded people</li>
+                                <li>Aspires to stay current in creative industry trends</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Task Section -->
+        <div class="task-section">
+            <h2>🎯 Your Task (Product Coordinator Perspective)</h2>
+            <p class="mb-3">For your assigned persona, answer these questions:</p>
+            
+            <div class="task-questions">
+                <ol>
+                    <li><strong>Context of Use:</strong> When, where, and how will they interact with this product? What's happening around them?</li>
+                    
+                    <li><strong>Tasks & Goals:</strong> What specific actions do they need to accomplish? What does "success" look like in the moment of use?</li>
+                    
+                    <li><strong>Pain Points & Frustrations:</strong> What could go wrong during their experience? What would make them quit or get annoyed?</li>
+                    
+                    <li><strong>Technical Considerations:</strong> What devices, connectivity, accessibility needs, or technical comfort level matters?</li>
+                    
+                    <li><strong>Behavioral Patterns:</strong> How do they actually interact with similar products? Any habits or shortcuts they rely on?</li>
+                </ol>
+            </div>
+            
+            <div class="reminder-box">
+                <strong>Remember:</strong> Marketing tells you who they are and why they'd choose you. Product tells you how to serve them well once they're using your product.
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
